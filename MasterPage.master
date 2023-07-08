@@ -1,0 +1,93 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+        
+    </asp:ContentPlaceHolder>  
+   
+    <link href="StyleSheet.css" rel="stylesheet" />
+    <%--<script src="jquery.li-scroller.1.0.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("ul#marquee").liScroll({travelocity:0.15});
+        });
+    </script>--%>
+    
+</head>
+<body>
+    <form id="form1" runat="server">
+       
+        
+        <div id="dvt">
+            <br />
+            <br />
+            <img src="images/k1.png" />
+            <asp:Label ID="Label1" runat="server" Text="KARACHI ACADEMY" Font-Size="XX-Large" Font-Names="Times New Roman" ForeColor="#FF0066" Font-Bold="True"></asp:Label>
+            
+            <br />
+            <br />
+            <asp:Button ID="Button1" runat="server" Text="Get Your Tutor" BackColor="#EEEEEE" Font-Bold="True" Font-Names="Times New Roman" Font-Size="Large" ForeColor="#FF0066" />
+             
+        </div>
+        <br />
+        <div id="mover">
+            
+            <marquee direction="left"><u><a href="Register.aspx">The No.1 Home Tuitions Provider to Students in "Karachi"</a></u></marquee>
+            
+        </div>
+        <%--<ul>
+          <li><span>10/10/2007</span>The first thing ...
+              </li>
+            </ul>--%>
+        
+              <div id="dvm">
+           
+            <asp:Menu ID="Menu1" runat="server" BackColor="#003399" DataSourceID="SiteMapDataSource1" DynamicHorizontalOffset="4" Font-Names="Times New Roman" Font-Size="1.5em" ForeColor="White" Orientation="Horizontal" StaticSubMenuIndent="10px">
+                <DynamicHoverStyle BackColor="#990000" ForeColor="White" />
+                <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                <DynamicMenuStyle BackColor="#FFFBD6" />
+                <DynamicSelectedStyle BackColor="#FFCC66" />
+                <StaticHoverStyle BackColor="#990000" ForeColor="White" />
+                <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                <StaticSelectedStyle BackColor="#FFCC66" />
+            </asp:Menu>
+            
+           
+                  <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" ShowStartingNode="False" />
+           
+        </div>
+
+        <div id="dvh">
+            <h3>Welcome To Karachi Academy</h3>
+            <h6 style="text-align: center; font-size: medium; color: #FF0066"> We provide Home Tutions to students by Our Qualified Teachers</h6>
+            
+        </div>
+        
+       
+         <div id="dvl">
+            &nbsp;&nbsp; <asp:TreeView ID="TreeView1" runat="server" DataSourceID="SiteMapDataSource2" ImageSet="Arrows" Font-Size="XX-Large">
+                 <HoverNodeStyle Font-Underline="True" ForeColor="Blue"/>
+                 <NodeStyle Font-Names="Times New roman" Font-Size="14pt" ForeColor="Black" HorizontalPadding="10px" NodeSpacing="0px" VerticalPadding="0px" />
+                 <ParentNodeStyle Font-Bold="False" />
+                 <SelectedNodeStyle Font-Underline="True" HorizontalPadding="5px" VerticalPadding="0px" ForeColor="Black" />
+             </asp:TreeView>
+             <asp:SiteMapDataSource ID="SiteMapDataSource2" runat="server" />
+        </div>
+    <div id="dvr">
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+            
+            
+            
+        </asp:ContentPlaceHolder>
+    </div>
+        
+        <div id="dvb">
+
+        </div>
+    </form>
+</body>
+</html>
